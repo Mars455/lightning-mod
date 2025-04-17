@@ -6,10 +6,12 @@ import net.minecraft.component.type.ConsumableComponents;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.consume.ApplyEffectsConsumeEffect;
+import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -59,6 +61,28 @@ public class ModItems {
 			new Item.Settings()
 	);
 
+	public static final Item SHOCKING_HELMET = register(
+			"shocking_helmet",
+			settings -> new ArmorItem(ShockingArmorMaterial.INSTANCE, EquipmentType.HELMET, settings),
+			new Item.Settings().maxDamage(EquipmentType.HELMET.getMaxDamage(ShockingArmorMaterial.BASE_DURABILITY))
+	);
+	public static final Item SHOCKING_CHESTPLATE = register("shocking_chestplate",
+			settings -> new ArmorItem(ShockingArmorMaterial.INSTANCE, EquipmentType.CHESTPLATE, settings),
+			new Item.Settings().maxDamage(EquipmentType.CHESTPLATE.getMaxDamage(ShockingArmorMaterial.BASE_DURABILITY))
+	);
+
+	public static final Item SHOCKING_LEGGINGS = register(
+			"shocking_leggings",
+			settings -> new ArmorItem(ShockingArmorMaterial.INSTANCE, EquipmentType.LEGGINGS, settings),
+			new Item.Settings().maxDamage(EquipmentType.LEGGINGS.getMaxDamage(ShockingArmorMaterial.BASE_DURABILITY))
+	);
+
+	public static final Item SHOCKING_BOOTS = register(
+			"shocking_boots",
+			settings -> new ArmorItem(ShockingArmorMaterial.INSTANCE, EquipmentType.BOOTS, settings),
+			new Item.Settings().maxDamage(EquipmentType.BOOTS.getMaxDamage(ShockingArmorMaterial.BASE_DURABILITY))
+	);
+
 	public static void initialize() {
 		FuelRegistryEvents.BUILD.register((builder, context) -> {
 			builder.add(ModItems.LIGHTNING_DUST, 128 * 20);
@@ -67,3 +91,4 @@ public class ModItems {
 
 	}
 }
+
