@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "lightning:item/shocking_leggings"
+  "model": {
+    "type": "minecraft:model",
+    "model": "lightning:item/shocking_leggings"
   }
 }
