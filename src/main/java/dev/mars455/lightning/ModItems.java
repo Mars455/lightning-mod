@@ -50,7 +50,7 @@ public class ModItems {
 			// The duration is in ticks, 20 ticks = 1 second
 
 			.consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.SATURATION, 6 * 20, 5), 0.8f))
-			.consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.HASTE, 30 * 20, 5), 1.0f))
+			.consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.SPEED, 30 * 20, 5), 1.0f))
 			.build();
 	public static final FoodComponent ELECTRIC_FOOD_COMPONENT = new FoodComponent.Builder()
 			.alwaysEdible()
