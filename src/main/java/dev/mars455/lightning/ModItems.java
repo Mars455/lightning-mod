@@ -44,13 +44,13 @@ public class ModItems {
 			.displayName(Text.translatable("itemGroup.lightning"))
 			.build();
 
-	public static final Item LIGHTNING_DUST = register("lightning_dust", Item::new, new Item.Settings());
 	public static final Item LIGHTNING_STICK = register("lightning_stick", Item::new, new Item.Settings());
 	public static final ConsumableComponent ELECTRIC_FOOD_CONSUMABLE_COMPONENT = ConsumableComponents.food()
 			// The duration is in ticks, 20 ticks = 1 second
 
 			.consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.SATURATION, 6 * 20, 5), 0.8f))
 			.consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.SPEED, 30 * 20, 5), 1.0f))
+			.consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 5 * 20, 10), 1.0f))
 			.build();
 	public static final FoodComponent ELECTRIC_FOOD_COMPONENT = new FoodComponent.Builder()
 			.alwaysEdible()
@@ -60,6 +60,11 @@ public class ModItems {
 			"shocking_apple",
 			ShockingAppleItem::new, // Use custom class
 			new Item.Settings().food(ELECTRIC_FOOD_COMPONENT, ELECTRIC_FOOD_CONSUMABLE_COMPONENT)
+	);
+	public static final Item LIGHTNING_DUST = register(
+			"lightning_dust",
+			LightningStick::new,
+			new Item.Settings()
 	);
 	public static final ToolMaterial SHOCKING_TOOL_MATERIAL = new ToolMaterial(
 			BlockTags.INCORRECT_FOR_WOODEN_TOOL,

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "lightning:block/lightning_dust_block"
+    }
+  }
+}
