@@ -6,6 +6,8 @@ import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 import net.minecraft.component.type.ConsumableComponent;
 import net.minecraft.component.type.ConsumableComponents;
 import net.minecraft.component.type.FoodComponent;
+import net.minecraft.entity.*;
+import net.minecraft.entity.attribute.EntityAttributeInstance;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
@@ -16,8 +18,10 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.BlockPos;
 
 import java.util.function.Function;
 
@@ -41,18 +45,22 @@ public class ModItems {
 			.build();
 
 	public static final Item LIGHTNING_DUST = register("lightning_dust", Item::new, new Item.Settings());
+	public static final Item LIGHTNING_STICK = register("lightning_stick", Item::new, new Item.Settings());
 	public static final ConsumableComponent ELECTRIC_FOOD_CONSUMABLE_COMPONENT = ConsumableComponents.food()
 			// The duration is in ticks, 20 ticks = 1 second
+
 			.consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.SATURATION, 6 * 20, 5), 0.8f))
+			.consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.HASTE, 30 * 20, 5), 1.0f))
 			.build();
 	public static final FoodComponent ELECTRIC_FOOD_COMPONENT = new FoodComponent.Builder()
 			.alwaysEdible()
+			.nutrition(10)
 			.build();
 	public static final Item SHOCKING_APPLE = register(
-		"shocking_apple",
-		Item::new,
-		new Item.Settings().food(ELECTRIC_FOOD_COMPONENT, ELECTRIC_FOOD_CONSUMABLE_COMPONENT)
-		);
+			"shocking_apple",
+			ShockingAppleItem::new, // Use custom class
+			new Item.Settings().food(ELECTRIC_FOOD_COMPONENT, ELECTRIC_FOOD_CONSUMABLE_COMPONENT)
+	);
 	public static final ToolMaterial SHOCKING_TOOL_MATERIAL = new ToolMaterial(
 			BlockTags.INCORRECT_FOR_WOODEN_TOOL,
 			4550,
