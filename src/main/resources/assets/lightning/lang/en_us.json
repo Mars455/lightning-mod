@@ -3,7 +3,8 @@
   "item.lightning.shocking_apple": "Shocking Apple",
   "item.lightning.shocking_sword": "Shocking Sword",
   "item.lightning.shocking_helmet": "Shocking Helmet",
-  "item,lightning.shocking_chestplate": "Shocking Chestplate",
+  "item.lightning.shocking_chestplate": "Shocking Chestplate",
   "item.lightning.shocking_leggings": "Shocking Leggings",
-  "item.lightning.shocking_boots": "Shocking Boots"
+  "item.lightning.shocking_boots": "Shocking Boots",
+  "itemGroup.lightning": "Lightning Items"
 }

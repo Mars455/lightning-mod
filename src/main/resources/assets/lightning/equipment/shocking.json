@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "lightning:shocking"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "lightning:shocking"
+      }
+    ]
+  }
+}

@@ -1,15 +1,14 @@
 package dev.mars455.lightning;
 
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 import net.minecraft.component.type.ConsumableComponent;
 import net.minecraft.component.type.ConsumableComponents;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.SwordItem;
-import net.minecraft.item.ToolMaterial;
+import net.minecraft.item.*;
 import net.minecraft.item.consume.ApplyEffectsConsumeEffect;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
@@ -17,6 +16,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 import java.util.function.Function;
@@ -34,6 +34,12 @@ public class ModItems {
 
 		return item;
 	}
+	public static final RegistryKey<ItemGroup> LIGHTNING_ITEM_GROUP_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(Lightning.MOD_ID, "lightning"));
+	public static final ItemGroup CUSTOM_ITEM_GROUP = FabricItemGroup.builder()
+			.icon(() -> new ItemStack(ModItems.SHOCKING_APPLE))
+			.displayName(Text.translatable("itemGroup.lightning"))
+			.build();
+
 	public static final Item LIGHTNING_DUST = register("lightning_dust", Item::new, new Item.Settings());
 	public static final ConsumableComponent ELECTRIC_FOOD_CONSUMABLE_COMPONENT = ConsumableComponents.food()
 			// The duration is in ticks, 20 ticks = 1 second
@@ -88,7 +94,21 @@ public class ModItems {
 			builder.add(ModItems.LIGHTNING_DUST, 128 * 20);
 			builder.add(ModItems.SHOCKING_APPLE, 128 * 20);
 		});
+// Register the group.
+		Registry.register(Registries.ITEM_GROUP, LIGHTNING_ITEM_GROUP_KEY, CUSTOM_ITEM_GROUP);
 
+// Register items to the custom item group.
+		ItemGroupEvents.modifyEntriesEvent(LIGHTNING_ITEM_GROUP_KEY).register(itemGroup -> {
+			itemGroup.add(ModItems.LIGHTNING_DUST);
+			itemGroup.add(ModItems.SHOCKING_APPLE);
+			itemGroup.add(ModItems.SHOCKING_SWORD);
+			itemGroup.add(ModItems.SHOCKING_HELMET);
+			itemGroup.add(ModItems.SHOCKING_BOOTS);
+			itemGroup.add(ModItems.SHOCKING_LEGGINGS);
+			itemGroup.add(ModItems.SHOCKING_CHESTPLATE);
+
+			// ...
+		});
 	}
 }
 
