@@ -79,6 +79,11 @@ public class ModItems {
 			settings -> new SwordItem(SHOCKING_TOOL_MATERIAL, 19f, 0.5f, settings),
 			new Item.Settings()
 	);
+	public static final Item LAVA_GEMSTONE_SWORD = register(
+			"lava_gemstone_sword",
+			settings -> new SwordItem(SHOCKING_TOOL_MATERIAL, 255f, 0.1f, settings),
+			new Item.Settings()
+	);
 
 	public static final Item SHOCKING_HELMET = register(
 			"shocking_helmet",
@@ -119,6 +124,7 @@ public class ModItems {
 			itemGroup.add(ModItems.SHOCKING_BOOTS);
 			itemGroup.add(ModItems.SHOCKING_LEGGINGS);
 			itemGroup.add(ModItems.SHOCKING_CHESTPLATE);
+			itemGroup.add(ModItems.LAVA_GEMSTONE_SWORD);
 
 			// ...
 		});
