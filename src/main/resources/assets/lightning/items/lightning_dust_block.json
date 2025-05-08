@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "lightning:item/lightning_dust_block"
+    "model": "lightning:block/lightning_dust_block"
   }
 }

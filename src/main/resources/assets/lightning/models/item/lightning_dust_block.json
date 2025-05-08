@@ -1,6 +1,3 @@
 {
-  "model": {
-    "type": "minecraft:model",
-    "model": "lightning:block/lightning_dust_block"
-  }
+  "parent": "lightning:block/lightning_dust_block"
 }

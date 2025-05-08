@@ -15,11 +15,15 @@ import net.minecraft.block.Block;
 import java.util.function.Function;
 
 public class ModBlocks {
-    private static Block register(String name, Function<AbstractBlock.Settings, Block> blockFactory, AbstractBlock.Settings settings, boolean shouldRegisterItem) {
+    private static Block register(String name, Function<AbstractBlock.Settings, Block> blockFactory, AbstractBlock.Settings settings, boolean requiresTool, float hardness, boolean shouldRegisterItem) {
         // Create a registry key for the block
         RegistryKey<Block> blockKey = keyOfBlock(name);
         // Create the block instance
-        Block block = blockFactory.apply(settings.registryKey(blockKey));
+        AbstractBlock.Settings modifiedSettings = settings.registryKey(blockKey).hardness(hardness);
+        if (requiresTool) {
+            modifiedSettings = modifiedSettings.requiresTool();
+        }
+        Block block = blockFactory.apply(modifiedSettings);
 
         // Sometimes, you may not want to register an item for the block.
         // Eg: if it's a technical block like `minecraft:moving_piston` or `minecraft:end_gateway`
@@ -46,6 +50,8 @@ public class ModBlocks {
             "lightning_dust_block",
             Block::new,
             AbstractBlock.Settings.create().sounds(BlockSoundGroup.SAND),
+            true, // requiresTool
+            50.0f, // hardness
             true
     );
 

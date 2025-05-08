@@ -66,6 +66,11 @@ public class ModItems {
 			LightningStick::new,
 			new Item.Settings()
 	);
+	public static final Item LIGHTNING_INGOT = register(
+			"lightning_ingot",
+			Item::new,
+			new Item.Settings()
+	);
 	public static final ToolMaterial SHOCKING_TOOL_MATERIAL = new ToolMaterial(
 			BlockTags.INCORRECT_FOR_WOODEN_TOOL,
 			4550,
