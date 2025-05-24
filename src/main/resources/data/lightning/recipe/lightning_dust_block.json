@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WWW",
+    "WRR",
+    "WWW"
+  ],
+  "key": {
+    "W": "lightning:lightning_dust",
+    "R": "lightning:lightning_dust"
+  },
+  "result": {
+    "id": "lightning:lightning_dust_block",
+    "count": 1
+  }
+}

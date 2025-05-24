@@ -22,6 +22,7 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
+import org.spongepowered.asm.mixin.Final;
 
 import java.util.function.Function;
 
@@ -75,18 +76,26 @@ public class ModItems {
 			BlockTags.INCORRECT_FOR_WOODEN_TOOL,
 			4550,
 			15.0F,
-			15F,
+			1.0F,
+			30,
+			ToolMaterial.DIAMOND.repairItems()
+	);
+	public static final ToolMaterial LAVA_TOOL_MATERIAL = new ToolMaterial(
+			BlockTags.INCORRECT_FOR_WOODEN_TOOL,
+			2990,
+			1.0F,
+			0.1F,
 			30,
 			ToolMaterial.DIAMOND.repairItems()
 	);
 	public static final Item SHOCKING_SWORD = register(
 			"shocking_sword",
-			settings -> new SwordItem(SHOCKING_TOOL_MATERIAL, 19f, 0.5f, settings),
+			settings -> new SwordItem(SHOCKING_TOOL_MATERIAL, 10.0f, 1.0f, settings),
 			new Item.Settings()
 	);
 	public static final Item LAVA_GEMSTONE_SWORD = register(
 			"lava_gemstone_sword",
-			settings -> new SwordItem(SHOCKING_TOOL_MATERIAL, 255f, 0.1f, settings),
+			settings -> new SwordItem(LAVA_TOOL_MATERIAL, 18.0f, -3.0f, settings),
 			new Item.Settings()
 	);
 
