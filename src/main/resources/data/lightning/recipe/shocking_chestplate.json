@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "Y Y",
+    "YYY",
+    "YYY"
+  ],
+  "key": {
+    "Y": "lightning:lightning_ingot"
+  },
+  "result": {
+    "id": "lightning:shocking_chestplate",
+    "count": 1
+  }
+}

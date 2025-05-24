@@ -72,13 +72,18 @@ public class ModItems {
 			Item::new,
 			new Item.Settings()
 	);
+	public static final Item ELEMENTAL_DUST = register(
+			"elemental_dust",
+			Item::new,
+			new Item.Settings()
+	);
 	public static final ToolMaterial SHOCKING_TOOL_MATERIAL = new ToolMaterial(
 			BlockTags.INCORRECT_FOR_WOODEN_TOOL,
 			4550,
 			15.0F,
 			1.0F,
 			30,
-			ToolMaterial.DIAMOND.repairItems()
+			ToolMaterial.NETHERITE.repairItems()
 	);
 	public static final ToolMaterial LAVA_TOOL_MATERIAL = new ToolMaterial(
 			BlockTags.INCORRECT_FOR_WOODEN_TOOL,
@@ -86,7 +91,7 @@ public class ModItems {
 			1.0F,
 			0.1F,
 			30,
-			ToolMaterial.DIAMOND.repairItems()
+			ToolMaterial.NETHERITE.repairItems()
 	);
 	public static final Item SHOCKING_SWORD = register(
 			"shocking_sword",
@@ -139,7 +144,8 @@ public class ModItems {
 			itemGroup.add(ModItems.SHOCKING_LEGGINGS);
 			itemGroup.add(ModItems.SHOCKING_CHESTPLATE);
 			itemGroup.add(ModItems.LAVA_GEMSTONE_SWORD);
-
+			itemGroup.add(ModItems.ELEMENTAL_DUST);
+			itemGroup.add(ModItems.LIGHTNING_INGOT);
 			// ...
 		});
 	}

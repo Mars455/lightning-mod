@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " Y ",
+    " Y ",
+    " W "
+  ],
+  "key": {
+    "W": "minecraft:lightning_rod",
+    "Y": "lightning:lightning_ingot"
+  },
+  "result": {
+    "id": "lightning:shocking_sword",
+    "count": 1
+  }
+}

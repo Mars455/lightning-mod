@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC",
+    "DEF",
+    "GHI"
+  ],
+  "key": {
+    "A": "minecraft:redstone",
+    "B": "minecraft:blaze_powder",
+    "C": "minecraft:glowstone_dust",
+    "D": "minecraft:slime_ball",
+    "E": "minecraft:diamond",
+    "F": "minecraft:lapis_lazuli",
+    "G": "minecraft:amethyst_shard",
+    "H": "minecraft:cherry_leaves",
+    "I": "minecraft:ghast_tear"
+  },
+  "result": {
+    "id": "lightning:elemental_dust",
+    "count": 3
+  }
+}

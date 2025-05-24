@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "YYY",
+    "Y Y",
+    "   "
+  ],
+  "key": {
+    "Y": "lightning:lightning_ingot"
+  },
+  "result": {
+    "id": "lightning:shocking_helmet",
+    "count": 1
+  }
+}

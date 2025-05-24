@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XWX",
+    "WYW",
+    "XWX"
+  ],
+  "key": {
+    "W": "lightning:elemental_dust",
+    "X": "lightning:lightning_dust_block",
+    "Y": "minecraft:netherite_ingot"
+  },
+  "result": {
+    "id": "lightning:lightning_ingot",
+    "count": 1
+  }
+}

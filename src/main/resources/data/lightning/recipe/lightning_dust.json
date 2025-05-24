@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WWW",
+    "YYY",
+    "ZZZ"
+  ],
+  "key": {
+    "W": "minecraft:copper_ingot",
+    "Y": "minecraft:redstone_block",
+    "Z": "lightning:elemental_dust"
+  },
+  "result": {
+    "id": "lightning:lightning_dust",
+    "count": 8
+  }
+}
