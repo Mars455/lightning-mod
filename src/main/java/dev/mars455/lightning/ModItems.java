@@ -1,5 +1,6 @@
 package dev.mars455.lightning;
 
+import dev.mars455.lightning.item.ShockingSwordItem;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
@@ -45,7 +46,10 @@ public class ModItems {
 			.displayName(Text.translatable("itemGroup.lightning"))
 			.build();
 
-	public static final Item LIGHTNING_STICK = register("lightning_stick", Item::new, new Item.Settings());
+	public static final Item LIGHTNING_STICK = register(
+			"lightning_stick",
+			LightningStick::new,
+			new Item.Settings());
 	public static final ConsumableComponent ELECTRIC_FOOD_CONSUMABLE_COMPONENT = ConsumableComponents.food()
 			// The duration is in ticks, 20 ticks = 1 second
 
@@ -59,7 +63,7 @@ public class ModItems {
 			.build();
 	public static final Item SHOCKING_APPLE = register(
 			"shocking_apple",
-			ShockingAppleItem::new, // Use custom class
+			ShockingAppleItem::new,
 			new Item.Settings().food(ELECTRIC_FOOD_COMPONENT, ELECTRIC_FOOD_CONSUMABLE_COMPONENT)
 	);
 	public static final Item LIGHTNING_DUST = register(
@@ -95,7 +99,7 @@ public class ModItems {
 	);
 	public static final Item SHOCKING_SWORD = register(
 			"shocking_sword",
-			settings -> new SwordItem(SHOCKING_TOOL_MATERIAL, 10.0f, 1.0f, settings),
+			settings -> new ShockingSwordItem(SHOCKING_TOOL_MATERIAL, 7.0f, 3.0f, settings),
 			new Item.Settings()
 	);
 	public static final Item LAVA_GEMSTONE_SWORD = register(

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "ABA",
+    "AAA"
+  ],
+  "key": {
+    "A": "minecraft:stick",
+    "B": "lightning:lightning_dust"
+  },
+  "result": {
+    "id": "lightning:lightning_stick",
+    "count": 8
+  }
+}
