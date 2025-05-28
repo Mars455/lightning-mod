@@ -11,5 +11,10 @@
   "block.lightning.lightning_dust_block": "Lightning Dust Block",
   "item.lightning.lightning_dust_block": "Lightning Dust Block",
   "item.lightning.lightning_ingot": "Lightning Dust Ingot",
-  "item.lightning.elemental_dust": "Elemental Dust"
+  "item.lightning.elemental_dust": "Elemental Dust",
+  "item.lightning.carbon_fibre": "Carbon Fibre",
+  "item.lightning.carbon_threads": "Carbon Threads",
+  "item.lightning.carbon_tube": "Carbon Tube",
+  "item.lightning.taser_part": "Taser Part",
+  "item.lightning.escrima": "Escrima"
 }

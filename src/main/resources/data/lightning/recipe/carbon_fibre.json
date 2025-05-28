@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "lightning:carbon_thread",
+    "lightning:carbon_thread",
+    "lightning:carbon_thread",
+    "lightning:carbon_thread",
+    "lightning:carbon_thread",
+    "lightning:carbon_thread",
+    "lightning:carbon_thread",
+    "lightning:carbon_thread",
+    "lightning:carbon_thread"
+  ],
+  "result": {
+    "id": "lightning:carbon_fibre",
+    "count": 2
+  }
+}

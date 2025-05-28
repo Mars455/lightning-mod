@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    [
+      "minecraft:coal",
+      "minecraft:charcoal"
+    ],
+    [
+      "minecraft:coal",
+      "minecraft:charcoal"
+    ],
+    "minecraft:diamond",
+    "minecraft:diamond"
+  ],
+  "result": {
+    "id": "lightning:carbon_thread",
+    "count": 3
+  }
+}

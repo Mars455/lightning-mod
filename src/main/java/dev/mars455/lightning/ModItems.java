@@ -125,7 +125,33 @@ public class ModItems {
 			settings -> new ArmorItem(ShockingArmorMaterial.INSTANCE, EquipmentType.BOOTS, settings),
 			new Item.Settings().maxDamage(EquipmentType.BOOTS.getMaxDamage(ShockingArmorMaterial.BASE_DURABILITY))
 	);
+	public static final Item CARBON_FIBRE = register(
+			"carbon_fibre",
+			Item::new,
+			new Item.Settings()
+	);
+	public static final Item CARBON_THREADS = register(
+			"carbon_threads",
+			Item::new,
+			new Item.Settings()
 
+	);
+	public static final Item CARBON_TUBE = register(
+			"carbon_tube",
+			Item::new,
+			new Item.Settings()
+	);
+
+	public static final Item TASER_PART = register(
+			"taser_part",
+			Item::new,
+			new Item.Settings()
+	);
+	public static final Item ESCRIMA = register(
+			"escrima",
+			settings -> new SwordItem(SHOCKING_TOOL_MATERIAL, 10.0f, 1.0f, settings),
+			new Item.Settings()
+	);
 	public static void initialize() {
 		FuelRegistryEvents.BUILD.register((builder, context) -> {
 			builder.add(ModItems.LIGHTNING_DUST, 128 * 20);

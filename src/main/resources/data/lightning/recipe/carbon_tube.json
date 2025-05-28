@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AA",
+    "AA",
+    "AA"
+  ],
+  "key": {
+    "A": [
+      "lightning:carbon_fibre"
+    ]
+  },
+  "result": {
+    "id": "lightning:carbon_tube",
+    "count": 2
+  }
+}
