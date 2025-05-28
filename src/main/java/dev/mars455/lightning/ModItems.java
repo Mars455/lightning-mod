@@ -1,5 +1,6 @@
 package dev.mars455.lightning;
 
+import dev.mars455.lightning.item.LavaSwordItem;
 import dev.mars455.lightning.item.ShockingSwordItem;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -104,7 +105,7 @@ public class ModItems {
 	);
 	public static final Item LAVA_GEMSTONE_SWORD = register(
 			"lava_gemstone_sword",
-			settings -> new SwordItem(LAVA_TOOL_MATERIAL, 18.0f, -3.0f, settings),
+			settings -> new LavaSwordItem(LAVA_TOOL_MATERIAL, 18.0f, -3.0f, settings),
 			new Item.Settings()
 	);
 
@@ -161,10 +162,7 @@ public class ModItems {
 			builder.add(ModItems.LIGHTNING_DUST, 128 * 20);
 			builder.add(ModItems.SHOCKING_APPLE, 128 * 20);
 		});
-// Register the group.
 		Registry.register(Registries.ITEM_GROUP, LIGHTNING_ITEM_GROUP_KEY, CUSTOM_ITEM_GROUP);
-
-// Register items to the custom item group.
 		ItemGroupEvents.modifyEntriesEvent(LIGHTNING_ITEM_GROUP_KEY).register(itemGroup -> {
 			itemGroup.add(ModItems.LIGHTNING_DUST);
 			itemGroup.add(ModItems.SHOCKING_APPLE);
@@ -176,7 +174,7 @@ public class ModItems {
 			itemGroup.add(ModItems.LAVA_GEMSTONE_SWORD);
 			itemGroup.add(ModItems.ELEMENTAL_DUST);
 			itemGroup.add(ModItems.LIGHTNING_INGOT);
-			// ...
+			itemGroup.add(ModItems.LIGHTNING_STICK);
 		});
 	}
 }
