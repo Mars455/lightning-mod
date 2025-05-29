@@ -44,7 +44,7 @@ public class ModItems {
 			.build();
 	public static final Item LAVA_GEM = register(
 			"lava_gem",
-			settings -> new LavaGem(settings),
+            LavaGem::new,
 			new Item.Settings()
 	);
 
