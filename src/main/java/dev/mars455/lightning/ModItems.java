@@ -1,5 +1,6 @@
 package dev.mars455.lightning;
 
+import dev.mars455.lightning.item.LavaGem;
 import dev.mars455.lightning.item.LavaSwordItem;
 import dev.mars455.lightning.item.ShockingSwordItem;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
@@ -8,8 +9,6 @@ import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 import net.minecraft.component.type.ConsumableComponent;
 import net.minecraft.component.type.ConsumableComponents;
 import net.minecraft.component.type.FoodComponent;
-import net.minecraft.entity.*;
-import net.minecraft.entity.attribute.EntityAttributeInstance;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
@@ -20,11 +19,8 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.BlockPos;
-import org.spongepowered.asm.mixin.Final;
 
 import java.util.function.Function;
 
@@ -46,11 +42,17 @@ public class ModItems {
 			.icon(() -> new ItemStack(ModItems.SHOCKING_APPLE))
 			.displayName(Text.translatable("itemGroup.lightning"))
 			.build();
+	public static final Item LAVA_GEM = register(
+			"lava_gem",
+			settings -> new LavaGem(settings),
+			new Item.Settings()
+	);
 
 	public static final Item LIGHTNING_STICK = register(
 			"lightning_stick",
 			LightningStick::new,
-			new Item.Settings());
+			new Item.Settings()
+	);
 	public static final ConsumableComponent ELECTRIC_FOOD_CONSUMABLE_COMPONENT = ConsumableComponents.food()
 			// The duration is in ticks, 20 ticks = 1 second
 
