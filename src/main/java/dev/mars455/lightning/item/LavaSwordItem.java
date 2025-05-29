@@ -27,7 +27,7 @@ public class LavaSwordItem extends SwordItem {
 		if (!world.isClient && world instanceof ServerWorld serverWorld) {
 			BlockPos pos = target.getBlockPos();
 			world.setBlockState(pos, Blocks.LAVA.getDefaultState());
-			target.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 6 * 20, 1), attacker);
+			target.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 1 * 20, 1), attacker);
 			attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 6*20, 1));
 			target.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 2*20, 1));
 		}

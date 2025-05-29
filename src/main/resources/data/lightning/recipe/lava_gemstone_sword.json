@@ -7,7 +7,7 @@
   ],
   "key": {
     "W": "minecraft:blaze_rod",
-    "Y": "lightning:lava_bucket"
+    "Y": "minecraft:lava_bucket"
   },
   "result": {
     "id": "lightning:lava_gemstone_sword",
