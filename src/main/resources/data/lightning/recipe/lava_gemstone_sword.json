@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " Y ",
+    " Y ",
+    " W "
+  ],
+  "key": {
+    "W": "minecraft:blaze_rod",
+    "Y": "lightning:lava_bucket"
+  },
+  "result": {
+    "id": "lightning:lava_gemstone_sword",
+    "count": 1
+  }
+}
