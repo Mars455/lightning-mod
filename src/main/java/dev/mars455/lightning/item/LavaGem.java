@@ -16,17 +16,16 @@ public class LavaGem extends Item {
 	public ActionResult useOnBlock(ItemUsageContext context) {
 		World world = context.getWorld();
 		BlockPos pos = context.getBlockPos().offset(context.getSide());
-        //noinspection deprecation
-        if (!world.isClient && world.getBlockState(pos).isAir() || world.getBlockState(pos).isLiquid()) {
+		context.getPlayer().playSound(
+			SoundEvents.BLOCK_GLASS_BREAK,
+				2.0F, // volume
+				0.1F  // pitch
+		);
+        	if (!world.isClient && world.getBlockState(pos).isAir() || world.getBlockState(pos).isLiquid()) {
 			world.setBlockState(pos, Blocks.LAVA.getDefaultState(), 11);
 			context.getStack().decrement(1);
-            assert context.getPlayer() != null;
-            context.getPlayer().playSound(
-					SoundEvents.BLOCK_GLASS_BREAK,
-					2.0F, // volume
-					0.1F  // pitch
-			);
-			return ActionResult.SUCCESS;
+            	assert context.getPlayer() != null;
+		return ActionResult.SUCCESS;
 		}
 
         return ActionResult.PASS;
