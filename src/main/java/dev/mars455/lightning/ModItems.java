@@ -48,6 +48,7 @@ public class ModItems {
 			new Item.Settings()
 	);
 
+
 	public static final Item LIGHTNING_STICK = register(
 			"lightning_stick",
 			LightningStick::new,
