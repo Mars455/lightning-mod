@@ -42,6 +42,8 @@ public class ModItems {
 			.icon(() -> new ItemStack(ModItems.SHOCKING_APPLE))
 			.displayName(Text.translatable("itemGroup.lightning"))
 			.build();
+
+
 	public static final Item LAVA_GEM = register(
 			"lava_gem",
             LavaGem::new,
@@ -166,6 +168,7 @@ public class ModItems {
 			builder.add(ModItems.SHOCKING_APPLE, 128 * 20);
 		});
 		Registry.register(Registries.ITEM_GROUP, LIGHTNING_ITEM_GROUP_KEY, CUSTOM_ITEM_GROUP);
+
 		ItemGroupEvents.modifyEntriesEvent(LIGHTNING_ITEM_GROUP_KEY).register(itemGroup -> {
 			itemGroup.add(ModItems.LIGHTNING_DUST);
 			itemGroup.add(ModItems.SHOCKING_APPLE);
