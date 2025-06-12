@@ -34,8 +34,10 @@ public class Lightning implements ModInitializer {
 			.consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.HASTE, 30 * 20, 5), 1.0f))
 			.build();
 
-	public static final RegistryEntry<StatusEffect> TATER =
+	public static final RegistryEntry<StatusEffect> SHOCKED =
 			Registry.registerReference(Registries.STATUS_EFFECT, Identifier.of(Lightning.MOD_ID, "shocked"), new ShockedEffect());
+	public static final RegistryEntry<StatusEffect> CHARGED =
+			Registry.registerReference(Registries.STATUS_EFFECT, Identifier.of(Lightning.MOD_ID, "charged"), new ChargedEffect());
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.

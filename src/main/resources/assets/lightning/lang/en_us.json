@@ -19,5 +19,7 @@
   "item.lightning.escrima": "Escrima",
   "item.lightning.lightning_stick": "Lightning Stick",
   "item.lightning.lava_gem": "Lava Gem",
-  "itemGroup.lightning_tools": "Elemental Tools and Armour"
+  "itemGroup.lightning_tools": "Elemental Tools and Armour",
+  "effect.lightning.charged": "Charged",
+  "effect.lightning.shocked": "Shocked"
 }
