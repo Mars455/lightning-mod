@@ -21,7 +21,7 @@ public class ChargedEffect extends StatusEffect {
     public boolean applyUpdateEffect(ServerWorld world, LivingEntity entity, int amplifier) {
         if (entity.age % 20 == 0) {
             entity.heal(1.0f);
-            entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 5, 5), entity);
+            entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 3*20, 5), entity);
         }
         return super.applyUpdateEffect(world, entity, amplifier);
     }

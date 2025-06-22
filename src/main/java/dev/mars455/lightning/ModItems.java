@@ -108,6 +108,11 @@ public class ModItems {
 			settings -> new ShockingSwordItem(SHOCKING_TOOL_MATERIAL, 7.0f, 3.0f, settings),
 			new Item.Settings()
 	);
+	public static final Item PICKLE_STAFF = register(
+			"pickle_staff",
+			settings -> new SwordItem(ToolMaterial.WOOD, 3.0f, 1.0f, settings),
+			new Item.Settings()
+	);
 	public static final Item LAVA_GEMSTONE_SWORD = register(
 			"lava_gemstone_sword",
 			settings -> new LavaSwordItem(LAVA_TOOL_MATERIAL, 18.0f, -3.0f, settings),

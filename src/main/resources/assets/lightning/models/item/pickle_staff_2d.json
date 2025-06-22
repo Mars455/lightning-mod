@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "lightning:item/pickle_staff_2d"
+  }
+}

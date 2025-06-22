@@ -21,5 +21,6 @@
   "item.lightning.lava_gem": "Lava Gem",
   "itemGroup.lightning_tools": "Elemental Tools and Armour",
   "effect.lightning.charged": "Charged",
-  "effect.lightning.shocked": "Shocked"
+  "effect.lightning.shocked": "Shocked",
+  "item.lightning.pickle_staff": "Pickle Staff"
 }
